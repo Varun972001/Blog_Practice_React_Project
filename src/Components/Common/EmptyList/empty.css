@@ -1,0 +1,9 @@
+.Empty
+{
+    display:flex;
+    justify-content: center;
+}
+.Empty img
+{
+    width: 250px;
+}

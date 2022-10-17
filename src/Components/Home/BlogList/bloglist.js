@@ -3,6 +3,7 @@ import './bloglist.css'
 
 function BlogList(props)
 {
+    console.log(props);
     return(
     <div className="blog-list">
         {props.blog.map((blog_det)=>{

@@ -1,17 +1,17 @@
 import './search.css'
 
-function Search(props)
+function Search({value,handlesearch,clearsearch,formsubmit})
 {
     return (<>
     <div className='searchbar'>
-        <form onSubmit={props.submitform}>
+        <form onSubmit={formsubmit}>
             <input 
             type="text" 
             placeholder="Search By Category"
-            value={props.value}
-            onChange={props.handleSearch}>
+            onChange={handlesearch}
+            value={value}>
             </input>
-            {props.value && <span onClick={props.clearSearch}>X</span>}
+            {value && <span onClick={clearsearch}>X</span>}
             <button>Go</button>
         </form>
     </div>
