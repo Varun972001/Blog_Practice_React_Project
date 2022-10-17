@@ -1,15 +1,15 @@
 import BlogItem from "./BlogItem/blogItem"
-import './bloglist'
+import './bloglist.css'
 
 function BlogList(props)
 {
-    return(<>
-    <h1>Hy</h1>
-    {/* {props.blog.map(blog=>{
-        <BlogItem blogitem={blog} />
-    })} */}
-    <BlogItem />
-    </>)
+    return(
+    <div className="blog-list">
+        {props.blog.map((blog_det)=>{
+            return <BlogItem blogitem={blog_det} key={blog_det.id}/>
+        })}
+    </div>
+    )
 }
 
 export default BlogList;
